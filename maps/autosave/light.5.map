@@ -1,0 +1,167 @@
+// Game: LevelDesign
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures/sbs_tiny_texture_pack_256x256/256x256/Bricks;textures/sbs_tiny_texture_pack_256x256/256x256/Grass;textures/sbs_tiny_texture_pack_256x256/256x256/Roofs;textures/sbs_tiny_texture_pack_256x256/256x256/Tile"
+// brush 0
+{
+( -80 48 16 ) ( -80 49 16 ) ( -80 48 17 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 47 -80 -16 ) ( 48 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 48 -79 -16 ) ( 47 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -80 48 16 ) ( -81 48 16 ) ( -80 49 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -80 48 16 ) ( -80 48 17 ) ( -81 48 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 48 -80 -15 ) ( 48 -79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+}
+// brush 1
+{
+( -80 48 112 ) ( -80 48 113 ) ( -80 47 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 48 112 ) ( -81 48 112 ) ( -80 48 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 80 -16 ) ( 47 80 -16 ) ( 48 79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 48 128 ) ( -80 47 128 ) ( -81 48 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 80 -16 ) ( 48 80 -15 ) ( 47 80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 80 -16 ) ( 48 79 -16 ) ( 48 80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 2
+{
+( 48 48 112 ) ( 48 48 113 ) ( 48 47 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 48 112 ) ( 47 48 112 ) ( 48 48 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 80 -16 ) ( 175 80 -16 ) ( 176 79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 48 128 ) ( 48 47 128 ) ( 47 48 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 80 -16 ) ( 176 80 -15 ) ( 175 80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 80 -16 ) ( 176 79 -16 ) ( 176 80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 3
+{
+( -208 48 112 ) ( -208 48 113 ) ( -208 47 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -208 48 112 ) ( -209 48 112 ) ( -208 48 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 80 -16 ) ( -81 80 -16 ) ( -80 79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -208 48 128 ) ( -208 47 128 ) ( -209 48 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 80 -16 ) ( -80 80 -15 ) ( -81 80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 80 -16 ) ( -80 79 -16 ) ( -80 80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 4
+{
+( -208 48 16 ) ( -208 49 16 ) ( -208 48 17 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -81 -80 -16 ) ( -80 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -80 -79 -16 ) ( -81 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -208 48 16 ) ( -209 48 16 ) ( -208 49 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -208 48 16 ) ( -208 48 17 ) ( -209 48 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -80 -80 -15 ) ( -80 -79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+}
+// brush 5
+{
+( 48 48 16 ) ( 48 49 16 ) ( 48 48 17 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 175 -80 -16 ) ( 176 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 176 -79 -16 ) ( 175 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 48 48 16 ) ( 47 48 16 ) ( 48 49 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 48 48 16 ) ( 48 48 17 ) ( 47 48 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 176 -80 -15 ) ( 176 -79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_12-256x256 0 0 0 0.1 0.1
+}
+// brush 6
+{
+( 48 -112 112 ) ( 48 -112 113 ) ( 48 -113 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 -112 112 ) ( 47 -112 112 ) ( 48 -112 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 175 -80 -16 ) ( 176 -81 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 -112 128 ) ( 48 -113 128 ) ( 47 -112 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 176 -80 -15 ) ( 175 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 -80 -16 ) ( 176 -81 -16 ) ( 176 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 7
+{
+( -80 -112 112 ) ( -80 -112 113 ) ( -80 -113 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 -112 112 ) ( -81 -112 112 ) ( -80 -112 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 47 -80 -16 ) ( 48 -81 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 -112 128 ) ( -80 -113 128 ) ( -81 -112 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 48 -80 -15 ) ( 47 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 48 -80 -16 ) ( 48 -81 -16 ) ( 48 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 8
+{
+( -208 -112 112 ) ( -208 -112 113 ) ( -208 -113 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -208 -112 112 ) ( -209 -112 112 ) ( -208 -112 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -81 -80 -16 ) ( -80 -81 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -208 -112 128 ) ( -208 -113 128 ) ( -209 -112 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -80 -80 -15 ) ( -81 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( -80 -80 -16 ) ( -80 -81 -16 ) ( -80 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 9
+{
+( 176 48 112 ) ( 176 49 112 ) ( 176 48 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 208 -80 -16 ) ( 207 -80 -16 ) ( 208 -80 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 208 -80 -16 ) ( 208 -79 -16 ) ( 207 -80 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 48 128 ) ( 175 48 128 ) ( 176 49 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 176 48 112 ) ( 176 48 113 ) ( 175 48 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+( 208 -80 -16 ) ( 208 -80 -15 ) ( 208 -79 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_02-256x256 0 0 0 0.1 0.1
+}
+// brush 10
+{
+( 152 -24 128 ) ( 152 -24 129 ) ( 152 -25 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 152 -24 128 ) ( 151 -24 128 ) ( 152 -24 129 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 184 0 120 ) ( 183 0 120 ) ( 184 -1 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 152 -24 128 ) ( 152 -25 128 ) ( 151 -24 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 184 -8 120 ) ( 184 -8 121 ) ( 183 -8 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 176 0 120 ) ( 176 -1 120 ) ( 176 0 121 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+}
+}
+// entity 1
+{
+"classname" "func_group"
+"_tb_type" "_tb_group"
+"_tb_name" "lamplight"
+"_tb_id" "3"
+// brush 0
+{
+( -152 -56 128 ) ( -152 -55 128 ) ( -152 -56 129 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -128 -80 120 ) ( -129 -80 120 ) ( -128 -80 121 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -128 -88 120 ) ( -128 -87 120 ) ( -129 -88 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -152 -56 128 ) ( -153 -56 128 ) ( -152 -55 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -152 -56 128 ) ( -152 -56 129 ) ( -153 -56 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -136 -88 120 ) ( -136 -88 121 ) ( -136 -87 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+}
+}
+// entity 2
+{
+"classname" "omni_light"
+"origin" "-144 -68 116"
+"light_color" "255 249 59"
+"energy" "2"
+"range" "10"
+"angle" "90"
+"_tb_group" "3"
+}
+// entity 3
+{
+"classname" "func_group"
+"_tb_type" "_tb_group"
+"_tb_name" "lamplight"
+"_tb_id" "1"
+// brush 0
+{
+( -24 48 128 ) ( -24 49 128 ) ( -24 48 129 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 0 24 120 ) ( -1 24 120 ) ( 0 24 121 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 0 16 120 ) ( 0 17 120 ) ( -1 16 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -24 48 128 ) ( -25 48 128 ) ( -24 49 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -24 48 128 ) ( -24 48 129 ) ( -25 48 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( -8 16 120 ) ( -8 16 121 ) ( -8 17 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+}
+}
+// entity 4
+{
+"classname" "omni_light"
+"origin" "-16 36 116"
+"light_color" "255 249 59"
+"energy" "2"
+"range" "10"
+"angle" "90"
+"_tb_group" "1"
+}
+// entity 5
+{
+"classname" "spot_light"
+"origin" "168 -16 116"
+"energy" "5"
+"range" "10"
+"light_color" "255 249 59"
+"angle" "90"
+}

@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://mj8vb422ernh"
+path="res://.godot/imported/light.3.map-6d98d501d8411232f935ea5546b859e5.tres"
+
+[deps]
+
+source_file="res://maps/autosave/light.3.map"
+dest_files=["res://.godot/imported/light.3.map-6d98d501d8411232f935ea5546b859e5.tres"]
+
+[params]
+

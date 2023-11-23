@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://c43u0p0mtp4sg"
+path="res://.godot/imported/light.5.map-1d15dfebc9a0b5ddfe1652bf5ae544f1.tres"
+
+[deps]
+
+source_file="res://maps/autosave/light.5.map"
+dest_files=["res://.godot/imported/light.5.map-1d15dfebc9a0b5ddfe1652bf5ae544f1.tres"]
+
+[params]
+

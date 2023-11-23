@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmsuf1ch0rmas"]
+
+[ext_resource type="Script" path="res://scenes/fps_player.gd" id="1_0m1ei"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5xw3p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dbhjb"]
+height = 1.2
+
+[node name="FPSPlayer" type="CharacterBody3D"]
+script = ExtResource("1_0m1ei")
+
+[node name="StandingCollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_5xw3p")
+
+[node name="CrouchingCollisionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CapsuleShape3D_dbhjb")
+disabled = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 2, 0)
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Head" type="Node3D" parent="Neck"]
+
+[node name="Eyes" type="Node3D" parent="Neck/Head"]
+
+[node name="Camera3D" type="Camera3D" parent="Neck/Head/Eyes"]

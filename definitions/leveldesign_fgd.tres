@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QodotFGDFile" load_steps=5 format=3 uid="uid://bohouvckltadk"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd" id="1_jh4hk"]
+[ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="1_pojqm"]
+[ext_resource type="Resource" uid="uid://c365qit0selwi" path="res://definitions/custom_light_point.tres" id="2_f2aan"]
+[ext_resource type="Resource" uid="uid://0umnmnw4760o" path="res://definitions/spot_light_point.tres" id="3_5xuev"]
+
+[resource]
+script = ExtResource("1_jh4hk")
+export_file = false
+target_folder = ""
+fgd_name = "LevelDesign"
+base_fgd_files = Array[Resource]([ExtResource("1_pojqm")])
+entity_definitions = Array[Resource]([ExtResource("2_f2aan"), ExtResource("3_5xuev")])

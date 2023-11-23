@@ -1,0 +1,51 @@
+// Game: LevelDesign
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures/sbs_tiny_texture_pack_256x256/256x256/Bricks;textures/sbs_tiny_texture_pack_256x256/256x256/Grass;textures/sbs_tiny_texture_pack_256x256/256x256/Roofs;textures/sbs_tiny_texture_pack_256x256/256x256/Tile"
+// brush 0
+{
+( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( -64 -64 -16 ) ( -64 -64 -15 ) ( -63 -64 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 80 64 16 ) ( 80 64 17 ) ( 80 65 16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+}
+// brush 1
+{
+( 64 64 112 ) ( 64 65 112 ) ( 64 64 113 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 96 -64 -16 ) ( 95 -64 -16 ) ( 96 -64 -15 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 96 -64 -16 ) ( 96 -63 -16 ) ( 95 -64 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 64 64 128 ) ( 63 64 128 ) ( 64 65 128 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 64 64 112 ) ( 64 64 113 ) ( 63 64 112 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+( 96 -64 -16 ) ( 96 -64 -15 ) ( 96 -63 -16 ) sbs_tiny_texture_pack_256x256/256x256/Bricks/Bricks_05-256x256 0 0 0 0.1 0.1
+}
+// brush 2
+{
+( 32 -16 120 ) ( 32 -15 120 ) ( 32 -16 121 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 32 -16 120 ) ( 32 -16 121 ) ( 33 -16 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 32 -16 120 ) ( 33 -16 120 ) ( 32 -15 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 64 9 128 ) ( 65 8 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 65 8 128 ) ( 64 8 129 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 64 8 129 ) ( 64 9 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+}
+// brush 3
+{
+( 32 -16 120 ) ( 32 -15 120 ) ( 32 -16 121 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 32 -16 120 ) ( 32 -16 121 ) ( 33 -16 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 32 -16 120 ) ( 33 -16 120 ) ( 32 -15 120 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 64 9 128 ) ( 65 8 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 65 8 128 ) ( 64 8 129 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+( 64 8 128 ) ( 64 8 129 ) ( 64 9 128 ) sbs_tiny_texture_pack_256x256/256x256/Roofs/Roofs_18-256x256 0 0 0 0.1 0.1
+}
+}
+// entity 1
+{
+"classname" "omni_light"
+"origin" "44 -4 116"
+"light_color" "255 1 255"
+"energy" "2"
+"range" "10"
+}

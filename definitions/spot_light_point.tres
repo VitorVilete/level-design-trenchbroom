@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="QodotFGDPointClass" load_steps=3 format=3 uid="uid://0umnmnw4760o"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd" id="1_jq8te"]
+[ext_resource type="Script" path="res://scripts/definitions/spot_light_point.gd" id="2_8c3dk"]
+
+[resource]
+script = ExtResource("1_jq8te")
+script_class = ExtResource("2_8c3dk")
+classname = "spot_light"
+description = "simple spotlight"
+qodot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"energy": 1,
+"light_color": "255 255 255",
+"range": 5,
+"rotation": "-90 0 0"
+}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.862745, 0.4, 0.858824, 1),
+"size": AABB(-4, -4, -4, 4, 4, 4)
+}
+node_class = "SpotLight3D"
+transient_node = false
