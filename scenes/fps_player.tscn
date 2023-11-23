@@ -43,14 +43,14 @@ initial_state = NodePath("Walking")
 [node name="Walking" type="Node" parent="StateMachine"]
 script = ExtResource("3_5uk3k")
 
+[node name="Crouching" type="Node" parent="StateMachine"]
+script = ExtResource("6_g7k1c")
+
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource("4_cci8u")
 
 [node name="Sprinting" type="Node" parent="StateMachine"]
 script = ExtResource("5_06pgl")
-
-[node name="Crouching" type="Node" parent="StateMachine"]
-script = ExtResource("6_g7k1c")
 
 [node name="Sliding" type="Node" parent="StateMachine"]
 script = ExtResource("7_3c13w")
