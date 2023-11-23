@@ -1,6 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmsuf1ch0rmas"]
+[gd_scene load_steps=10 format=3 uid="uid://dmsuf1ch0rmas"]
 
 [ext_resource type="Script" path="res://scenes/fps_player.gd" id="1_0m1ei"]
+[ext_resource type="PackedScene" uid="uid://b0vlht766wf37" path="res://scenes/state_machine.tscn" id="2_30d5f"]
+[ext_resource type="Script" path="res://scripts/states/Walking.gd" id="3_5uk3k"]
+[ext_resource type="Script" path="res://scripts/states/Jumping.gd" id="4_cci8u"]
+[ext_resource type="Script" path="res://scripts/states/Sprinting.gd" id="5_06pgl"]
+[ext_resource type="Script" path="res://scripts/states/Crouching.gd" id="6_g7k1c"]
+[ext_resource type="Script" path="res://scripts/states/Sliding.gd" id="7_3c13w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5xw3p"]
 
@@ -30,3 +36,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 [node name="Eyes" type="Node3D" parent="Neck/Head"]
 
 [node name="Camera3D" type="Camera3D" parent="Neck/Head/Eyes"]
+
+[node name="StateMachine" parent="." instance=ExtResource("2_30d5f")]
+initial_state = NodePath("Walking")
+
+[node name="Walking" type="Node" parent="StateMachine"]
+script = ExtResource("3_5uk3k")
+
+[node name="Jumping" type="Node" parent="StateMachine"]
+script = ExtResource("4_cci8u")
+
+[node name="Sprinting" type="Node" parent="StateMachine"]
+script = ExtResource("5_06pgl")
+
+[node name="Crouching" type="Node" parent="StateMachine"]
+script = ExtResource("6_g7k1c")
+
+[node name="Sliding" type="Node" parent="StateMachine"]
+script = ExtResource("7_3c13w")

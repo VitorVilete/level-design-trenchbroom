@@ -1,3 +1,5 @@
+class_name Player
+
 extends CharacterBody3D
 
 # Nodes
@@ -24,6 +26,19 @@ var lerp_speed = 10.0
 var slide_speed = 10.0
 
 # States
+enum CameraState {
+	FIRST_PERSON,
+	FREE_LOOK
+}
+enum MovementState {
+	WALKING,
+	SPRINTING,
+	CROUCHING,
+	SLIDING,
+	JUMPING
+}
+var currentMovementState = 0
+var currentCameraState = 0
 var walking = false
 var sprinting = false
 var crouching = false
@@ -72,7 +87,7 @@ func _unhandled_input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	if event is InputEventMouseMotion:
-		if free_looking:
+		if currentCameraState == CameraState.FREE_LOOK:
 			neck.rotate_y(deg_to_rad(-event.relative.x * mouse_sense))
 			neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
 			
@@ -81,27 +96,23 @@ func _unhandled_input(event):
 		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
 func _physics_process(delta):
+	print(currentMovementState)
 	# Getting movement input
 	var input_dir = Input.get_vector("walk_left", "walk_right", 
 	"walk_forward", "walk_backwards")
 	# Handling movement states
 	# Crouching
-	if can_crouch && (Input.is_action_pressed("crouch") || sliding):
+	if can_crouch && (Input.is_action_pressed("crouch") || currentMovementState == MovementState.SLIDING):
 		current_speed = CROUCHING_SPEED
 		head.position.y = lerp(head.position.y, 
 		player_height + crouching_depth, delta * lerp_speed)
 		standing_collision_shape.disabled = true
 		crouching_collision_shape.disabled = false
 		
-		if sprinting && input_dir != Vector2.ZERO:
-			sliding = true
+		if currentMovementState == MovementState.SPRINTING && input_dir != Vector2.ZERO:
+			currentMovementState = MovementState.SLIDING
 			slide_timer = slide_timer_max
 			slide_vector = input_dir
-			free_looking = true
-		
-		walking = false
-		sprinting = false
-		crouching = true
 
 	# Standing
 	elif !ray_cast_3d.is_colliding():
@@ -113,45 +124,41 @@ func _physics_process(delta):
 		# Sprinting
 		if can_sprint && Input.is_action_pressed("sprint"):
 			current_speed = SPRINTING_SPEED
-			walking = false
-			sprinting = true
-			crouching = false
+			currentMovementState = MovementState.SPRINTING
 
 		# Walking
 		else:
 			current_speed = WALKING_SPEED
-			walking = true
-			sprinting = false
-			crouching = false
+			currentMovementState = MovementState.WALKING
 	# Handle free looking
-	if Input.is_action_pressed("free_look") || sliding:
-		free_looking = true
-		if sliding:
+	if Input.is_action_pressed("free_look") || currentMovementState == MovementState.SLIDING:
+		currentCameraState = CameraState.FREE_LOOK
+		if currentMovementState == MovementState.SLIDING:
 			camera_3d.rotation.z = lerp(camera_3d.rotation.z,-deg_to_rad(7.0), delta * lerp_speed)
 		else:
 			camera_3d.rotation.z = -deg_to_rad(neck.rotation.y * free_look_tilt_amount)
 	else:
-		free_looking = false
+		currentCameraState = CameraState.FIRST_PERSON
 		neck.rotation.y = lerp(neck.rotation.y, 0.0, delta * lerp_speed)
 		camera_3d.rotation.z = lerp(camera_3d.rotation.z, 0.0, delta * lerp_speed)
 	# Handle sliding
-	if sliding:
+	if currentMovementState == MovementState.SLIDING:
 		slide_timer -= delta
 		if slide_timer <= 0:
-			sliding = false
-			free_looking = false
+			currentMovementState = MovementState.CROUCHING
+			currentCameraState = CameraState.FIRST_PERSON
 	# Handle headbob
-	if sprinting:
+	if currentMovementState == MovementState.SPRINTING:
 		head_bobbing_current_intensity = HEAD_BOBBING_SPRINTING_INTENSITY
 		head_bobbing_index += HEAD_BOBBING_SPRINTING_SPEED * delta
-	elif walking:
+	elif currentMovementState == MovementState.WALKING:
 		head_bobbing_current_intensity = HEAD_BOBBING_WALKING_INTENSITY 
 		head_bobbing_index += HEAD_BOBBING_WALKING_SPEED * delta
-	elif crouching:
+	elif currentMovementState == MovementState.CROUCHING:
 		head_bobbing_current_intensity = HEAD_BOBBING_CROUCHING_INTENSITY
 		head_bobbing_index += HEAD_BOBBING_CROUCHING_SPEED * delta
 		
-	if is_on_floor() && !sliding && input_dir != Vector2.ZERO:
+	if is_on_floor() && currentMovementState != MovementState.SLIDING && input_dir != Vector2.ZERO:
 		head_bobbing_vector.y = sin(head_bobbing_index)
 		head_bobbing_vector.x = sin(head_bobbing_index/2)+0.5
 		eyes.position.y = lerp(eyes.position.y, head_bobbing_vector.y*(head_bobbing_current_intensity/2.0),delta*lerp_speed)
@@ -165,7 +172,8 @@ func _physics_process(delta):
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		sliding = false
+		currentMovementState = MovementState.JUMPING
+		slide_timer = 0
 		velocity.y = JUMP_VELOCITY
 
 	# lerping the direction to make the movement feel less "snappy"
@@ -173,14 +181,14 @@ func _physics_process(delta):
 	(transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), 
 	delta * lerp_speed)
 	
-	if sliding:
+	if currentMovementState == MovementState.SLIDING:
 		direction = transform.basis * Vector3(slide_vector.x,0,slide_vector.y).normalized()
 	
 	if direction:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
 		
-		if sliding:
+		if currentMovementState == MovementState.SLIDING:
 			velocity.x = direction.x * (slide_timer  + 0.1) * slide_speed
 			velocity.z = direction.z * (slide_timer + 0.1) * slide_speed
 	else:

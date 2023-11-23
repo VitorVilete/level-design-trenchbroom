@@ -149,7 +149,6 @@ transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, -1.64216, 0)
 [node name="stage" type="Node3D" parent="."]
 
 [node name="QodotMap" type="Node3D" parent="stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_0o7fr")
 map_file = "C:/Users/Vilete/Desktop/Godot & GameDev Tools/Level Design With Trenchbroom/maps/light.map"
 entity_fgd = ExtResource("2_kk8nc")
