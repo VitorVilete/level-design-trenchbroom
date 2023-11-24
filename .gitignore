@@ -13,3 +13,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignoring .import files
+*.import
+
+# Ignoring Trenchbroom's autosaves
+maps/autosave/

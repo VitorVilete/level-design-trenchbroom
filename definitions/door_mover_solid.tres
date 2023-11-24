@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="QodotFGDSolidClass" load_steps=3 format=3 uid="uid://ctldl363fpxmf"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd" id="1_yg2gy"]
+[ext_resource type="Script" path="res://scripts/definitions/door_mover_solid.gd" id="2_g4b77"]
+
+[resource]
+script = ExtResource("1_yg2gy")
+spawn_type = 2
+build_visuals = true
+collision_shape_type = 1
+script_class = ExtResource("2_g4b77")
+classname = "door_mover"
+description = "Custom mover for custom doors"
+qodot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"rotation": Vector3(0, 0, 0),
+"scale": Vector3(1, 1, 1),
+"speed": 1.0,
+"targetname": "",
+"translation": Vector3(0, 0, 0)
+}
+class_property_descriptions = {}
+meta_properties = {}
+node_class = "CharacterBody3D"
+transient_node = false

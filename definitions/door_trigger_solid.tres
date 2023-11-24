@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QodotFGDSolidClass" load_steps=3 format=3 uid="uid://ogrmms1fgnoo"]
+
+[ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd" id="1_x4web"]
+[ext_resource type="Script" path="res://scripts/definitions/door_trigger_solid.gd" id="2_mcuff"]
+
+[resource]
+script = ExtResource("1_x4web")
+spawn_type = 2
+build_visuals = false
+collision_shape_type = 1
+script_class = ExtResource("2_mcuff")
+classname = "door_trigger"
+description = "Custom Trigger for doors. Has triggers for enter and exiting the area."
+qodot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"target": ""
+}
+class_property_descriptions = {}
+meta_properties = {}
+node_class = "Area3D"
+transient_node = false

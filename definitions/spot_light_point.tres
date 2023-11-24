@@ -11,8 +11,9 @@ description = "simple spotlight"
 qodot_internal = false
 base_classes = Array[Resource]([])
 class_properties = {
+"angle": 45.0,
 "energy": 1,
-"light_color": "255 255 255",
+"light_color": Color(1, 1, 1, 1),
 "range": 5,
 "rotation": "-90 0 0"
 }
@@ -21,5 +22,5 @@ meta_properties = {
 "color": Color(0.862745, 0.4, 0.858824, 1),
 "size": AABB(-4, -4, -4, 4, 4, 4)
 }
-node_class = "SpotLight3D"
+node_class = "Node3D"
 transient_node = false
